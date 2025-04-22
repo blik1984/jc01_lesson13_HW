@@ -17,14 +17,14 @@ public class Main {
 
 		Library library = new Library();
 
-		library.addBook(book1);
-		library.addBook(book2);
-		library.addBook(book3);
-		library.addBook(book4);
-		library.addBook(book5);
-		library.addBook(book6);
-		library.addBook(book7);
-		library.addBook(book8);
+		library.add(book1);
+		library.add(book2);
+		library.add(book3);
+		library.add(book4);
+		library.add(book5);
+		library.add(book6);
+		library.add(book7);
+		library.add(book8);
 
 		Library lib2 = selectAction("publishingHouse", "АСТ", library); // фильтра часто делаются через выпадающие
 																		// списки доступных
@@ -57,7 +57,7 @@ public class Main {
 		Library libAuthor = new Library();
 		for (int i = 0; i < lib.getSize(); i++) {
 			if (lib.getBook(i).getAuthor().contains(author)) {
-				libAuthor.addBook(lib.getBook(i));
+				libAuthor.add(lib.getBook(i));
 			}
 		}
 		return libAuthor;
@@ -77,7 +77,7 @@ public class Main {
 		Library libAfterPublishingYear = new Library();
 		for (int i = 0; i < lib.getSize(); i++) {
 			if (lib.getBook(i).getPublishingYear() > Integer.parseInt(publishingYear)) {
-				libAfterPublishingYear.addBook(lib.getBook(i));
+				libAfterPublishingYear.add(lib.getBook(i));
 			}
 		}
 		return libAfterPublishingYear;
