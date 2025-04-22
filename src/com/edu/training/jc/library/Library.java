@@ -26,7 +26,7 @@ public class Library {
 		return library.get(index);
 	}
 
-	public void addBook(Book book) {
+	public void add(Book book) {
 
 			this.library.add(book);
 		
